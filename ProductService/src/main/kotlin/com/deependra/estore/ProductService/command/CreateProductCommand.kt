@@ -2,11 +2,12 @@ package com.deependra.estore.ProductService.command
 
 import org.axonframework.modelling.command.TargetAggregateIdentifier
 import java.math.BigDecimal
+import java.util.UUID
 
-class CreateProductCommand (
+data class CreateProductCommand (
     @TargetAggregateIdentifier
-    var productId:String,
-    var title:String,
-    var price:BigDecimal,
-    var quantity:Integer
+    val productId:UUID,
+    val title:String,
+    val price:BigDecimal,
+    val quantity:Integer
     )
